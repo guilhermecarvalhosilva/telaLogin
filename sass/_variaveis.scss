@@ -1,0 +1,11 @@
+$roxo-claro: #7c13e8;
+$roxo-escuro: #340762;
+$cinza: rgb(138, 135, 135);
+$branco: #fff;
+
+@mixin flexBox($direction, $content,  $items) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $content;
+    align-items: $items;
+}
