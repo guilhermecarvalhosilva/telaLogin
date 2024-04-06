@@ -26,14 +26,14 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 40px 0px;
+  gap: 55px 0px;
 }
 .card .card-form .campo {
   position: relative;
   width: 90%;
   height: auto;
 }
-.card .card-form .campo [type=text],
+.card .card-form .campo [type=email],
 .card .card-form .campo [type=password] {
   background-color: transparent;
   width: 100%;
@@ -46,12 +46,17 @@
   color: #fff;
   font-size: 1.1em;
   text-indent: 10px;
+  transition: 0.8s;
 }
-.card .card-form .campo [type=text]:focus + .nome-campo, .card .card-form .campo [type=text]:valid + .nome-campo,
+.card .card-form .campo [type=email]:focus + .nome-campo, .card .card-form .campo [type=email]:valid + .nome-campo,
 .card .card-form .campo [type=password]:focus + .nome-campo,
 .card .card-form .campo [type=password]:valid + .nome-campo {
   top: -20px;
   font-size: 0.8em;
+}
+.card .card-form .campo [type=email].ativo,
+.card .card-form .campo [type=password].ativo {
+  border-color: red;
 }
 .card .card-form .campo .nome-campo {
   position: absolute;
@@ -61,6 +66,10 @@
   font-size: 1.1em;
   transition: 0.3s;
   pointer-events: none;
+}
+.card .card-form .campo .nome-campo.ativo {
+  top: -20px;
+  font-size: 0.8em;
 }
 .card .card-form .campo .icone-campo {
   position: absolute;
@@ -98,6 +107,19 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
+}
+.card .card-form .campo span {
+  position: absolute;
+  left: 0px;
+  bottom: -23px;
+  color: red;
+  font-size: 0.8em;
+  font-weight: 600;
+  opacity: 0;
+  transition: 0.8s;
+}
+.card .card-form .campo span.ativo {
+  opacity: 1;
 }
 .card .card-form [type=submit] {
   cursor: pointer;
