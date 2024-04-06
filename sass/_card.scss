@@ -26,6 +26,7 @@
         .campo {
             position: relative;
             width: 90%;
+            height: auto;
 
           
     
@@ -93,8 +94,6 @@
                     @include flexBox(row, center, center);
                 }
             }
-
-           
            
         }
     

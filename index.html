@@ -26,12 +26,17 @@
                 </div>
 
             </article>
-            <input type="submit" value="Acessar">
+            <input type="submit" value="Acessar" id="verificar">
         </form>
 
         <article class="icone-pessoa">
             <i class="bi bi-person-badge-fill"></i>
         </article>
     </section>
-    <script src="script/mudarSenha.js"></script>
+    <script src="script/ocultarSenha.js"></script>
+    <script>
+      document.querySelector('#verificar').addEventListener('click', () => {
+        alert('ola')
+      })
+    </script>
 </html>
