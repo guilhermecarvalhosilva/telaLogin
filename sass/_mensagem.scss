@@ -1,0 +1,27 @@
+.mensagem {
+    background: rgb(16, 239, 19);
+    position: absolute;
+    top: -150px;
+    max-width: 400px;
+    width: 90%;
+    height: auto;
+    padding: 30px 0px;
+    z-index: 999;
+    border-radius: 5px;
+    @include flexBox(row, center, center);
+    opacity: 0;
+    transition: 0.5s;
+
+    .paragrafo {
+        color: rgb(21, 115, 22);
+        font-size: 1em;
+        font-weight: 600;
+        width: 90%;
+        text-align: center;
+    }
+}
+
+.mensagem.ativo {
+    opacity: 1;
+    top: 50px;
+}

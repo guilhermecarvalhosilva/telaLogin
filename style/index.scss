@@ -4,6 +4,7 @@
 
 @import '../sass/variaveis';
 @import '../sass/card';
+@import '../sass/mensagem';
 
 * {
     margin: 0%;
@@ -18,5 +19,8 @@ body {
     width: 100%;
     margin: auto;
     min-height: 100vh;
+    padding: 60px 0px;
     @include flexBox(row, center, center);
+    position: relative;
 }
+

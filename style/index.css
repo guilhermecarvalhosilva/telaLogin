@@ -34,6 +34,7 @@
   height: auto;
 }
 .card .card-form .campo [type=email],
+.card .card-form .campo [type=text],
 .card .card-form .campo [type=password] {
   background-color: transparent;
   width: 100%;
@@ -49,12 +50,15 @@
   transition: 0.8s;
 }
 .card .card-form .campo [type=email]:focus + .nome-campo, .card .card-form .campo [type=email]:valid + .nome-campo,
+.card .card-form .campo [type=text]:focus + .nome-campo,
+.card .card-form .campo [type=text]:valid + .nome-campo,
 .card .card-form .campo [type=password]:focus + .nome-campo,
 .card .card-form .campo [type=password]:valid + .nome-campo {
   top: -20px;
   font-size: 0.8em;
 }
 .card .card-form .campo [type=email].ativo,
+.card .card-form .campo [type=text].ativo,
 .card .card-form .campo [type=password].ativo {
   border-color: red;
 }
@@ -87,6 +91,7 @@
   z-index: 999;
 }
 .card .card-form .campo .icone-senha {
+  cursor: pointer;
   position: absolute;
   right: 2px;
   top: 4px;
@@ -154,6 +159,41 @@
   align-items: center;
 }
 
+@media (max-width: 360px) {
+  .card .card-form [type=submit] {
+    max-width: 200px;
+  }
+}
+.mensagem {
+  background: rgb(16, 239, 19);
+  position: absolute;
+  top: -150px;
+  max-width: 400px;
+  width: 90%;
+  height: auto;
+  padding: 30px 0px;
+  z-index: 999;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+.mensagem .paragrafo {
+  color: rgb(21, 115, 22);
+  font-size: 1em;
+  font-weight: 600;
+  width: 90%;
+  text-align: center;
+}
+
+.mensagem.ativo {
+  opacity: 1;
+  top: 50px;
+}
+
 * {
   margin: 0%;
   padding: 0%;
@@ -167,8 +207,10 @@ body {
   width: 100%;
   margin: auto;
   min-height: 100vh;
+  padding: 60px 0px;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  position: relative;
 }/*# sourceMappingURL=index.css.map */

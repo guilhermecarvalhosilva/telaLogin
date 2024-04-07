@@ -31,6 +31,7 @@
           
     
             [type="email"], 
+            [type="text"], 
             [type="password"] {
                 background-color: transparent;
                 width: 100%;
@@ -56,6 +57,7 @@
             }
 
             [type="email"].ativo, 
+            [type="text"].ativo, 
             [type="password"].ativo  {
                 border-color: red;
             }
@@ -89,6 +91,7 @@
             }
 
             .icone-senha {
+                cursor: pointer;
                 position: absolute;
                 right: 2px;
                 top: 4px;
@@ -159,4 +162,11 @@
     
 
     
+}
+
+@media(max-width: 360px) {
+    .card .card-form [type=submit] {
+        max-width: 200px;
+       
+    }
 }
