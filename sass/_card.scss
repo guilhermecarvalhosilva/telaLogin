@@ -5,9 +5,9 @@
     width: 90%;
     min-height: 450px;
     border-radius: 10px;
-    padding: 60px 0px;
+    padding: 65px 0px;
     @include flexBox(column, center, center);
-    gap: 50px 0px;
+    gap: 30px 0px;
 
     .titulo {
         text-transform: uppercase;
@@ -20,7 +20,7 @@
         width: 100%;
         height: auto;
         @include flexBox(column, center, center);
-        gap: 35px 0px;
+        gap: 50px 0px;
 
         .campo {
             position: relative;
